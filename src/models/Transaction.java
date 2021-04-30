@@ -10,8 +10,7 @@ public class Transaction {
     public Transaction(int accountId, double amount) {
         this.accountId = accountId;
         this.amount = amount;
-        Date date = new Date();
-        this.date = date;
+        this.date = new Date();
     }
 
     public int getAccountId() {
@@ -26,6 +25,6 @@ public class Transaction {
 
     @Override
     public String toString() {
-        return "Transaction - : Account ID: " + accountId + "; Amount: " + amount;
+        return "Transaction : Account ID: " + accountId + "; Amount: " + amount;
     }
 }

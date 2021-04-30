@@ -13,8 +13,8 @@ public class Client extends Person {
     }
 
     {
-        noOfClients++;
         this.clientId = noOfClients;
+        noOfClients++;
     }
     public Client(String firstName, String lastName, String phoneNumber, int year, int month, int day) {
         super(firstName, lastName, phoneNumber, year, month, day);

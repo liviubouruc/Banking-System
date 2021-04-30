@@ -8,6 +8,6 @@ public class DebitCard extends Card {
 
     @Override
     public String toString() {
-        return "Debit Card; Account: " + ownerId;
+        return "Debit Card; Account: " + ownerId + " Number: " + number + " CVV: " + CVV;
     }
 }

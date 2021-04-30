@@ -3,7 +3,7 @@ package models;
 public class ExchangeTransaction extends Transaction {
     private int receiverAccountId;
 
-    public ExchangeTransaction(int accountId, int receiverAccountId, int amount) {
+    public ExchangeTransaction(int accountId, int receiverAccountId, double amount) {
         super(accountId, amount);
         this.receiverAccountId = receiverAccountId;
     }

@@ -10,6 +10,6 @@ public class CreditCard extends Card {
 
     @Override
     public String toString() {
-        return "Credit Card; Account: " + ownerId;
+        return "Credit Card; Account: " + ownerId + " Number: " + number + " CVV: " + CVV + " Debt: " + debt;
     }
 }

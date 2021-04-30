@@ -7,6 +7,7 @@ public class Account implements Comparable<Account> {
     private static int noOfAccounts;
     private int accountId;
     private Double balance;
+    private String currencyType;
     private Date creationDate;
     private ArrayList<Transaction> transactions;
     private ArrayList<Card> cards;
@@ -14,12 +15,15 @@ public class Account implements Comparable<Account> {
     static {
         noOfAccounts = 0;
     }
+
     {
-        noOfAccounts++;
         this.accountId = noOfAccounts;
+        noOfAccounts++;
+
     }
-    public Account() {
-        this.balance = 0.0;
+    public Account(Double balance, String currencyType) {
+        this.balance = balance;
+        this.currencyType = currencyType;
         this.creationDate = new Date();
         this.transactions = new ArrayList<>();
         this.cards = new ArrayList<>();
@@ -63,5 +67,10 @@ public class Account implements Comparable<Account> {
     @Override
     public int compareTo(Account o) {
         return this.balance.compareTo(o.balance);
+    }
+
+    @Override
+    public String toString() {
+        return "Account ID: " + accountId + " Balance: " + balance + " Currecy type: " + currencyType + " Creation Date: " + creationDate;
     }
 }

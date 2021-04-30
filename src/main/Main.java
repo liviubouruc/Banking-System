@@ -6,15 +6,13 @@ public class Main {
     public static void main(String[] args) {
         TestService service = new TestService();
 
-        service.addClient();
-        service.addClient();
-        service.createAccount();
-        service.addCard();
-        service.addMoney();
-        service.retrieveMoney();
-        service.exchange();
+        service.addClients();
+        service.showClients();
+        service.addAccounts();
+        service.addCards();
+        service.showCards();
+        service.addTransactions();
         service.showAllExchanges();
         service.showAllTransactions();
-        service.showClients();
     }
 }
