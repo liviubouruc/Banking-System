@@ -7,15 +7,13 @@ public class Person {
     protected String firstName;
     protected String lastName;
     protected String phoneNumber;
-    protected Date dateOfBirth;
+    protected String dateOfBirth;
 
-    public Person(String firstName, String lastName, String phoneNumber, int year, int month, int day) {
+    public Person(String firstName, String lastName, String phoneNumber, String dateOfBirth) {
         this.firstName = firstName;
         this.lastName = lastName;
         this.phoneNumber = phoneNumber;
-        Calendar calendar = Calendar.getInstance();
-        calendar.set(year, month, day);
-        this.dateOfBirth = calendar.getTime();
+        this.dateOfBirth = dateOfBirth;
     }
 
     public String getFirstName() {
@@ -39,7 +37,7 @@ public class Person {
         this.phoneNumber = phoneNumber;
     }
 
-    public Date getDateOfBirth() {
+    public String getDateOfBirth() {
         return dateOfBirth;
     }
 }

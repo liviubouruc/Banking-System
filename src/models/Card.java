@@ -4,13 +4,15 @@ import java.util.Calendar;
 import java.util.Date;
 
 public abstract class Card {
-    protected int ownerId;
+    protected int cardId;
+    protected static int maxId = 0;
     protected String number;
     protected Date expirationDate;
     protected int CVV;
 
-    public Card(int ownerId, String number, int CVV) {
-        this.ownerId = ownerId;
+    public Card(int cardId, String number, int CVV) {
+        this.cardId = cardId;
+        maxId = Math.max(maxId, this.cardId);
         this.number = number;
         this.CVV = CVV;
 
@@ -21,6 +23,7 @@ public abstract class Card {
         this.expirationDate = calendar.getTime();
     }
 
+    public static int getMaxId() { return maxId; }
     public String getNumber() {
         return number;
     }
